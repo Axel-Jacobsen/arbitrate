@@ -1,6 +1,7 @@
 import exchange_basics
 import ccxt
-from graph_tool.all import *
+import graph_tool.all as gt
+import time
 
 print('modules loaded')
 
@@ -9,8 +10,9 @@ binance    = ccxt.binance()
 
 vertex_name_map = {}
 
-g = Graph()
+g = gt.Graph()
 
+t1 = time.time()
 conversion_set = exchange_basics.analyze_raw_tickers(exchange_basics.get_tickers(binance))
 for conversion in conversion_set:
     currencies = conversion[0].split('/')
@@ -28,6 +30,7 @@ for conversion in conversion_set:
 
     g.add_edge(v_from, v_to)
 
+print('{:.2} seconds to parse data into graph'.format(time.time() - t1))
 print(vertex_name_map)
-pos = sfdp_layout(g)
-graph_draw(g,  pos=pos)
+pos = gt.sfdp_layout(g)
+gt.graph_draw(g,  pos=pos)
