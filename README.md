@@ -6,4 +6,4 @@
 
 `pip3 install cctx`
 
-`brew install graph-tool` to use `graph.py`
+`brew install graph-tool` to use `graph_analysis.py`
