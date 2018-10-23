@@ -1,0 +1,31 @@
+{
+    "symbol": "BTC/CAD",
+    "timestamp": 1539806386000,
+    "datetime": "2018-10-17T19:59:46.000Z",
+    "high": 9063.33,
+    "low": 8900.0,
+    "bid": 8900.5,
+    "bidVolume": null,
+    "ask": 9054.99,
+    "askVolume": null,
+    "vwap": 8980.55,
+    "open": null,
+    "close": 9054.99,
+    "last": 9054.99,
+    "previousClose": null,
+    "change": null,
+    "percentage": null,
+    "average": null,
+    "baseVolume": 90.83092924,
+    "quoteVolume": 815711.701586282,
+    "info": {
+        "high": "9063.33",
+        "last": "9054.99",
+        "timestamp": "1539806386",
+        "volume": "90.83092924",
+        "vwap": "8980.55",
+        "low": "8900.00",
+        "ask": "9054.99",
+        "bid": "8900.50"
+    }
+}
