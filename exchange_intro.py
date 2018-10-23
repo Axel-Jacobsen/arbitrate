@@ -2,6 +2,7 @@ import ccxt
 import json
 
 quadrigacx = ccxt.quadrigacx()
+binance    = ccxt.binance()
 
 def save_json(json_data, filename):
     with open(filename, 'w') as f:
@@ -22,6 +23,8 @@ def analyze_raw_tickers(json_data):
         print(ticker, json_data[ticker]['bid'])
 
 if __name__ == '__main__':
-    save_json(quadrigacx.fetch_ticker('BTC/CAD'), 'btccad.json')
-    save_json(get_tickers(quadrigacx), 'quadrigacx_tickers.json')
+    save_json(quadrigacx.fetch_ticker('BTC/CAD'), 'miscellaneous_data/btccad.json')
+    save_json(get_tickers(quadrigacx), 'ticker_data/quadrigacx_tickers.json')
+    save_json(get_tickers(binance), 'ticker_data/binance_tickers.json')
     analyze_raw_tickers(get_tickers(quadrigacx))
+    analyze_raw_tickers(get_tickers(binance))
