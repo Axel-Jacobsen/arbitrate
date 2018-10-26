@@ -12,7 +12,7 @@ binance = ccxt.binance()
 g = {
     'nodes': [],
     'links': [],
-    'collection_date': time.strftime('%d/%m/%Y %H:%M:%S')
+    'collection_date': time.strftime('%d/%m/%Y %H:%M')
 }
 node_set = set()
 
