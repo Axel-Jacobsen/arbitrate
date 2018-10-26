@@ -1,6 +1,6 @@
 import exchange_basics
 import ccxt
-import json
+import json, time
 
 """
 Script to prepare the json data that we eff with
@@ -11,7 +11,8 @@ binance = ccxt.binance()
 
 g = {
     'nodes': [],
-    'links': []
+    'links': [],
+    'collection_date': time.strftime('%d/%m/%Y %H:%M:%S')
 }
 node_set = set()
 
